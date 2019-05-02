@@ -1,0 +1,14 @@
+<div class="jumbotron cart-box">
+    <div class="container">
+        <h1>Shopping cart</h1>
+    </div>
+</div>
+<article class="plist" ng-repeat="product in $ctrl.info">
+  <div>{{product._id}}</div>
+  <div>{{product.title}}</div>
+  <div>{{product.short_description | limitTo: 100 }}{{product.short_description.length > 20 ? '...' : ''}}</div>
+  <div>{{product.quantity}}</div>
+  <div>{{product.price}}</div>
+  <div>{{product.amount}}</div>
+  <div><button ng-if="!product.action" class="btn btn-primary btn-lg" role="button" ui-sref="cart" ng-click="$ctrl.removeFromCart(product)">Delete</button></div>
+</article>

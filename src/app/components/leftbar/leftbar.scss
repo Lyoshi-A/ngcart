@@ -1,0 +1,53 @@
+left-bar {
+    overflow: auto;
+    height: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+
+left-bar::-webkit-scrollbar {
+    display: none;
+}
+
+left-bar {
+    width: 32.5rem;
+    transition: left 1000ms ease-in-out;
+    color: white;
+    background: #2e2d33;
+}
+
+.leftcontent {
+    padding: 2rem;
+}
+.topleftpanel {
+    display:flex;
+    justify-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: rgba(249,43,43, 0.43);
+    color: white;
+    z-index:2;
+    a {
+        padding: .5rem 2rem;
+        color: white;
+    }
+}
+
+
+.bottomleftpanel {
+    display:flex;
+    justify-items: center;
+    justify-content: center;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background: #2e2d33;
+    z-index:2;
+    a {
+        padding: .5rem 2rem;
+        color: white;
+    }
+}

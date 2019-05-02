@@ -1,0 +1,20 @@
+<div class="products_container">
+    <article class="product-item relative text-center" ng-repeat="product in $ctrl.products">
+        <header>
+            <h3 class="text-center">{{product.title}}</h3>
+            <h4><b>#:</b>{{product._id}}</h4>
+            <span><i class="far fa-calendar-alt"></i>{{product.created | date:'yyyy-MM-dd HH:mm'}}</span>
+        </header>
+        <section class="flags relative clearfix">
+           <img class="flags__img" ng-src="{{product.picture}}{{product.guid}}">
+        </section>
+        <section class="flags relative clearfix">
+            {{ product.short_description | limitTo: 150 }}{{product.short_description.length > 20 ? '...' : ''}}
+        </section>
+        <footer>
+            <h4>Product price: <b>{{product.price}}</b></h4>
+            <h4>Product quantity: <b>{{product.quantity}}</b></h4>
+            <button class="btn btn-primary btn-lg" role="button" ui-sref="cart" ng-click="$ctrl.addToCart(product)">Add To Cart</button>
+        </footer>
+    </article>
+</div>
